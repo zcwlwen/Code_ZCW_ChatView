@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [UITabBar appearance].translucent = NO;
     self.tabBar.tintColor = kYellow;//设置TabBar选中颜色
     [self setAllChildViewController];
     
