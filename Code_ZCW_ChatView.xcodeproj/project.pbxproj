@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		24DC36591D8A8249001EBED8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DC36581D8A8249001EBED8 /* main.m */; };
 		24DC365C1D8A8249001EBED8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DC365B1D8A8249001EBED8 /* AppDelegate.m */; };
-		24DC365F1D8A8249001EBED8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DC365E1D8A8249001EBED8 /* ViewController.m */; };
 		24DC36621D8A8249001EBED8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DC36601D8A8249001EBED8 /* Main.storyboard */; };
 		24DC36641D8A8249001EBED8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24DC36631D8A8249001EBED8 /* Assets.xcassets */; };
 		24DC36671D8A8249001EBED8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DC36651D8A8249001EBED8 /* LaunchScreen.storyboard */; };
@@ -20,8 +19,6 @@
 		24DC36581D8A8249001EBED8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24DC365A1D8A8249001EBED8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		24DC365B1D8A8249001EBED8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		24DC365D1D8A8249001EBED8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		24DC365E1D8A8249001EBED8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		24DC36611D8A8249001EBED8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24DC36631D8A8249001EBED8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24DC36661D8A8249001EBED8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +36,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2439CBF51DADD3D60099F174 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2439CBF71DADD51E0099F174 /* Main */,
+				2439CBF81DADD52C0099F174 /* YeeCall(一块) */,
+				2439CBFB1DADD5AA0099F174 /* Friend(好友) */,
+				2439CBFA1DADD58F0099F174 /* Group(群组) */,
+				2439CBF91DADD5560099F174 /* Me(我) */,
+				2439CBF61DADD5010099F174 /* AppDelegate */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		2439CBF61DADD5010099F174 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				24DC365A1D8A8249001EBED8 /* AppDelegate.h */,
+				24DC365B1D8A8249001EBED8 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2439CBF71DADD51E0099F174 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		2439CBF81DADD52C0099F174 /* YeeCall(一块) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "YeeCall(一块)";
+			sourceTree = "<group>";
+		};
+		2439CBF91DADD5560099F174 /* Me(我) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Me(我)";
+			sourceTree = "<group>";
+		};
+		2439CBFA1DADD58F0099F174 /* Group(群组) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Group(群组)";
+			sourceTree = "<group>";
+		};
+		2439CBFB1DADD5AA0099F174 /* Friend(好友) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Friend(好友)";
+			sourceTree = "<group>";
+		};
 		24DC364B1D8A8249001EBED8 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +112,7 @@
 		24DC36561D8A8249001EBED8 /* Code_ZCW_ChatView */ = {
 			isa = PBXGroup;
 			children = (
-				24DC365A1D8A8249001EBED8 /* AppDelegate.h */,
-				24DC365B1D8A8249001EBED8 /* AppDelegate.m */,
-				24DC365D1D8A8249001EBED8 /* ViewController.h */,
-				24DC365E1D8A8249001EBED8 /* ViewController.m */,
+				2439CBF51DADD3D60099F174 /* Classes */,
 				24DC36601D8A8249001EBED8 /* Main.storyboard */,
 				24DC36631D8A8249001EBED8 /* Assets.xcassets */,
 				24DC36651D8A8249001EBED8 /* LaunchScreen.storyboard */,
@@ -112,6 +163,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 7KHT33HNZK;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -151,7 +207,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24DC365F1D8A8249001EBED8 /* ViewController.m in Sources */,
 				24DC365C1D8A8249001EBED8 /* AppDelegate.m in Sources */,
 				24DC36591D8A8249001EBED8 /* main.m in Sources */,
 			);
@@ -273,6 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7KHT33HNZK;
 				INFOPLIST_FILE = Code_ZCW_ChatView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zcwlwen.code.Code-ZCW-ChatView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,6 +341,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7KHT33HNZK;
 				INFOPLIST_FILE = Code_ZCW_ChatView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zcwlwen.code.Code-ZCW-ChatView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -310,6 +367,7 @@
 				24DC366D1D8A8249001EBED8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
