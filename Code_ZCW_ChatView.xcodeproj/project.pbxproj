@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2428DB191DADFEE9002B040C /* ChatView.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatView.pch; sourceTree = "<group>"; };
 		2439CBFC1DADD7BD0099F174 /* YeeCallNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YeeCallNavigationController.h; sourceTree = "<group>"; };
 		2439CBFD1DADD7BD0099F174 /* YeeCallNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YeeCallNavigationController.m; sourceTree = "<group>"; };
 		2439CBFF1DADD7EE0099F174 /* YeeCallTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YeeCallTabBarController.h; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 				24DC36631D8A8249001EBED8 /* Assets.xcassets */,
 				24DC36651D8A8249001EBED8 /* LaunchScreen.storyboard */,
 				24DC36681D8A8249001EBED8 /* Info.plist */,
+				2428DB191DADFEE9002B040C /* ChatView.pch */,
 				24DC36571D8A8249001EBED8 /* Supporting Files */,
 			);
 			path = Code_ZCW_ChatView;
@@ -363,6 +365,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7KHT33HNZK;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/abai/Documents/Code/Code_ZCW_ChatView/Code_ZCW_ChatView/ChatView.pch;
 				INFOPLIST_FILE = Code_ZCW_ChatView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -376,6 +380,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7KHT33HNZK;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/abai/Documents/Code/Code_ZCW_ChatView/Code_ZCW_ChatView/ChatView.pch;
 				INFOPLIST_FILE = Code_ZCW_ChatView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

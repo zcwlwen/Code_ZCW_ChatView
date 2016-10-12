@@ -1,0 +1,38 @@
+//
+//  ChatView.pch
+//  Code_ZCW_ChatView
+//
+//  Created by 张朝伟 on 2016/10/12.
+//  Copyright © 2016年 张朝伟. All rights reserved.
+//
+
+#ifndef ChatView_pch
+#define ChatView_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* ChatView_pch */
+
+//打印调试
+#if DEBUG
+#define ZCWLog(fmt,...)    NSLog((@"%s [Line %d] " fmt),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)  /**<输出语句*/
+#else
+#define ZCWLog(fmt, ...)
+#endif
+//颜色相关
+#define ZCWColorWithAlpha(red,green,blue,alpha) [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:alpha]
+#define ZCWColor(red,green,blue) [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1.0]
+
+//随机颜色
+#define ZCWRandomColor ZCWColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+//高度宽带等
+#define kWindowH [UIScreen mainScreen].bounds.size.height
+#define kWindowW [UIScreen mainScreen].bounds.size.width
+
+#define kStatusH [[UIApplication sharedApplication] statusBarFrame].size.height//状态栏高度
+#define kNavH  self.navigationController.navigationBar.frame.size.height//导航栏高度
+
+//这个项目用到的颜色
+#define kYellow [UIColor colorWithRed:255/255.0 green:179/255.0 blue:36/255.0 alpha:1]
+

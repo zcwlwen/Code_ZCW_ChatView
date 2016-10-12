@@ -8,7 +8,9 @@
 
 #import "MeViewController.h"
 
-@interface MeViewController ()
+@interface MeViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic ,strong)UITableView *mainTableView;
 
 @end
 
@@ -16,8 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"我";
     self.view.backgroundColor = [UIColor whiteColor];
-    // Do any additional setup after loading the view.
+    
+}
+- (void)creatTableView{
+    
+    _mainTableView = [[UITableView alloc]init];
+    
 }
 
 - (void)didReceiveMemoryWarning {

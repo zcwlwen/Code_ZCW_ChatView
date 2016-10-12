@@ -16,8 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"群组";
     self.view.backgroundColor = [UIColor whiteColor];
-    // Do any additional setup after loading the view.
+    
+    [self addBarButton];
+}
+#pragma mark - 添加右上角button
+- (void)addBarButton{
+    UIBarButtonItem *barBtn = [[UIBarButtonItem alloc]init];
+    [barBtn setImage:[UIImage imageNamed:@"ic_group_contact_barBtn_normal"]];
+    barBtn.target = self;
+    barBtn.action = @selector(addGroup);
+    barBtn.tintColor = [UIColor blackColor];
+    self.navigationItem.rightBarButtonItem = barBtn;
+}
+- (void)addGroup{
+    //添加群组操作
+    ZCWLog(@"11");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,14 +40,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
