@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2428DB1F1DAF1C3C002B040C /* GroupCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2428DB1E1DAF1C3C002B040C /* GroupCollectionViewCell.m */; };
+		2428DB231DAF61BF002B040C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2428DB221DAF61BF002B040C /* LoginViewController.m */; };
+		2428DB261DAF61F4002B040C /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2428DB251DAF61F4002B040C /* SignUpViewController.m */; };
+		2428DB291DAF624B002B040C /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2428DB281DAF624B002B040C /* WelcomeViewController.m */; };
 		2439CBFE1DADD7BD0099F174 /* YeeCallNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2439CBFD1DADD7BD0099F174 /* YeeCallNavigationController.m */; };
 		2439CC011DADD7EE0099F174 /* YeeCallTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC001DADD7EE0099F174 /* YeeCallTabBarController.m */; };
 		2439CC071DADD8BD0099F174 /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC061DADD8BD0099F174 /* FriendViewController.m */; };
@@ -26,6 +29,12 @@
 		2428DB191DADFEE9002B040C /* ChatView.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatView.pch; sourceTree = "<group>"; };
 		2428DB1D1DAF1C3C002B040C /* GroupCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupCollectionViewCell.h; sourceTree = "<group>"; };
 		2428DB1E1DAF1C3C002B040C /* GroupCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupCollectionViewCell.m; sourceTree = "<group>"; };
+		2428DB211DAF61BF002B040C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2428DB221DAF61BF002B040C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2428DB241DAF61F4002B040C /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		2428DB251DAF61F4002B040C /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		2428DB271DAF624B002B040C /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		2428DB281DAF624B002B040C /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		2439CBFC1DADD7BD0099F174 /* YeeCallNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YeeCallNavigationController.h; sourceTree = "<group>"; };
 		2439CBFD1DADD7BD0099F174 /* YeeCallNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YeeCallNavigationController.m; sourceTree = "<group>"; };
 		2439CBFF1DADD7EE0099F174 /* YeeCallTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YeeCallTabBarController.h; sourceTree = "<group>"; };
@@ -88,6 +97,19 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		2428DB201DAF6174002B040C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2428DB211DAF61BF002B040C /* LoginViewController.h */,
+				2428DB221DAF61BF002B040C /* LoginViewController.m */,
+				2428DB241DAF61F4002B040C /* SignUpViewController.h */,
+				2428DB251DAF61F4002B040C /* SignUpViewController.m */,
+				2428DB271DAF624B002B040C /* WelcomeViewController.h */,
+				2428DB281DAF624B002B040C /* WelcomeViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		2439CBF51DADD3D60099F174 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +135,7 @@
 		2439CBF71DADD51E0099F174 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2428DB201DAF6174002B040C /* Login */,
 				2439CBFC1DADD7BD0099F174 /* YeeCallNavigationController.h */,
 				2439CBFD1DADD7BD0099F174 /* YeeCallNavigationController.m */,
 				2439CBFF1DADD7EE0099F174 /* YeeCallTabBarController.h */,
@@ -347,10 +370,13 @@
 				24DC365C1D8A8249001EBED8 /* AppDelegate.m in Sources */,
 				2439CBFE1DADD7BD0099F174 /* YeeCallNavigationController.m in Sources */,
 				24DC36591D8A8249001EBED8 /* main.m in Sources */,
+				2428DB231DAF61BF002B040C /* LoginViewController.m in Sources */,
+				2428DB291DAF624B002B040C /* WelcomeViewController.m in Sources */,
 				2439CC071DADD8BD0099F174 /* FriendViewController.m in Sources */,
 				2428DB1F1DAF1C3C002B040C /* GroupCollectionViewCell.m in Sources */,
 				2439CC0A1DADD8DA0099F174 /* YeeCallViewController.m in Sources */,
 				2439CC101DADD8F60099F174 /* MeViewController.m in Sources */,
+				2428DB261DAF61F4002B040C /* SignUpViewController.m in Sources */,
 				2439CC011DADD7EE0099F174 /* YeeCallTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

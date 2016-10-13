@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "YeeCallTabBarController.h"
 
+#import "WelcomeViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -20,8 +22,15 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     //设置窗口的根视图控制器
-    YeeCallTabBarController *yeeCallTabBarVC = [[YeeCallTabBarController alloc]init];
-    self.window.rootViewController = yeeCallTabBarVC;
+//    YeeCallTabBarController *yeeCallTabBarVC = [[YeeCallTabBarController alloc]init];
+//    self.window.rootViewController = yeeCallTabBarVC;
+    
+    //test
+    
+    WelcomeViewController *vc = [[WelcomeViewController alloc]init];
+//    UINavigationController *naVC = [[UINavigationController alloc]initWithRootViewController:vc];
+    self.window.rootViewController = vc;
+    
     //显示窗口
     [self.window makeKeyAndVisible];
     return YES;
