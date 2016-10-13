@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2428DB1F1DAF1C3C002B040C /* GroupCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2428DB1E1DAF1C3C002B040C /* GroupCollectionViewCell.m */; };
 		2439CBFE1DADD7BD0099F174 /* YeeCallNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2439CBFD1DADD7BD0099F174 /* YeeCallNavigationController.m */; };
 		2439CC011DADD7EE0099F174 /* YeeCallTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC001DADD7EE0099F174 /* YeeCallTabBarController.m */; };
 		2439CC071DADD8BD0099F174 /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC061DADD8BD0099F174 /* FriendViewController.m */; };
@@ -23,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		2428DB191DADFEE9002B040C /* ChatView.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatView.pch; sourceTree = "<group>"; };
+		2428DB1D1DAF1C3C002B040C /* GroupCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupCollectionViewCell.h; sourceTree = "<group>"; };
+		2428DB1E1DAF1C3C002B040C /* GroupCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupCollectionViewCell.m; sourceTree = "<group>"; };
 		2439CBFC1DADD7BD0099F174 /* YeeCallNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YeeCallNavigationController.h; sourceTree = "<group>"; };
 		2439CBFD1DADD7BD0099F174 /* YeeCallNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YeeCallNavigationController.m; sourceTree = "<group>"; };
 		2439CBFF1DADD7EE0099F174 /* YeeCallTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YeeCallTabBarController.h; sourceTree = "<group>"; };
@@ -60,6 +63,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2428DB1A1DAF1C06002B040C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2439CC0B1DADD8EA0099F174 /* GroupViewController.h */,
+				2439CC0C1DADD8EA0099F174 /* GroupViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2428DB1B1DAF1C13002B040C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2428DB1D1DAF1C3C002B040C /* GroupCollectionViewCell.h */,
+				2428DB1E1DAF1C3C002B040C /* GroupCollectionViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2428DB1C1DAF1C1E002B040C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		2439CBF51DADD3D60099F174 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,8 +142,9 @@
 		2439CBFA1DADD58F0099F174 /* Group(群组) */ = {
 			isa = PBXGroup;
 			children = (
-				2439CC0B1DADD8EA0099F174 /* GroupViewController.h */,
-				2439CC0C1DADD8EA0099F174 /* GroupViewController.m */,
+				2428DB1C1DAF1C1E002B040C /* Model */,
+				2428DB1B1DAF1C13002B040C /* View */,
+				2428DB1A1DAF1C06002B040C /* Controller */,
 			);
 			name = "Group(群组)";
 			sourceTree = "<group>";
@@ -319,6 +348,7 @@
 				2439CBFE1DADD7BD0099F174 /* YeeCallNavigationController.m in Sources */,
 				24DC36591D8A8249001EBED8 /* main.m in Sources */,
 				2439CC071DADD8BD0099F174 /* FriendViewController.m in Sources */,
+				2428DB1F1DAF1C3C002B040C /* GroupCollectionViewCell.m in Sources */,
 				2439CC0A1DADD8DA0099F174 /* YeeCallViewController.m in Sources */,
 				2439CC101DADD8F60099F174 /* MeViewController.m in Sources */,
 				2439CC011DADD7EE0099F174 /* YeeCallTabBarController.m in Sources */,

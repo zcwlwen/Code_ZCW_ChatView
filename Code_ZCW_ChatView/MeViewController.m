@@ -42,11 +42,16 @@
     [_mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(weakSelf.view).with.insets(UIEdgeInsetsMake(0,0,0,0));
     }];
+    [_mainTableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 0;
+    if (section == 4) {
+        return 20;
+    }else{
+        return 0;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -57,7 +62,7 @@
     if (indexPath.section == 0) {
         return 80;
     }
-    return  55;
+    return  50;
 }
 /**
  *  返回有多少组的代理方法
@@ -73,6 +78,8 @@
         return 2;
     }else if (section == 2){
         return 3;
+    }else if (section == 3){
+        return 1;
     }else{
         return 1;
     }

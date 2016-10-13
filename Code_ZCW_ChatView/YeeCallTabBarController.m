@@ -7,6 +7,8 @@
 //
 
 #import "YeeCallTabBarController.h"
+#import "YeeCallNavigationController.h"
+
 #import "YeeCallViewController.h"
 #import "FriendViewController.h"
 #import "GroupViewController.h"
@@ -45,7 +47,7 @@
 
 - (void)setUpOneChildViewController:(UIViewController *)viewController image:(UIImage *)image imageSelected:(UIImage *)imageSelected title:(NSString *)title {
     
-    UINavigationController *navC = [[UINavigationController alloc]initWithRootViewController:viewController];
+    YeeCallNavigationController *navC = [[YeeCallNavigationController alloc]initWithRootViewController:viewController];
   
     navC.tabBarItem.image = image;
     navC.tabBarItem.selectedImage = imageSelected;

@@ -21,8 +21,9 @@
 #define ZCWLog(fmt, ...)
 #endif
 //颜色相关
-#define ZCWColorWithAlpha(red,green,blue,alpha) [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:alpha]
-#define ZCWColor(red,green,blue) [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1.0]
+
+#define ZCWColorWithAlpha(R,G,B,A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+#define ZCWColor(R,G,B) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0]
 
 //随机颜色
 #define ZCWRandomColor ZCWColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
