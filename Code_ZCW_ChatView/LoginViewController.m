@@ -60,7 +60,6 @@
     _country.font = [UIFont systemFontOfSize:14];
     
     
-    
     _countryValue = [[UILabel alloc]init];
     _countryValue.text = @"中国";
     _countryValue.textColor = [UIColor blackColor];
@@ -204,7 +203,6 @@
         make.height.mas_equalTo(40);
         
     }];
-    
     
     
 }

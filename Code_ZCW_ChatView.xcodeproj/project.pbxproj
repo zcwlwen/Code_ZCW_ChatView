@@ -11,6 +11,9 @@
 		2428DB231DAF61BF002B040C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2428DB221DAF61BF002B040C /* LoginViewController.m */; };
 		2428DB261DAF61F4002B040C /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2428DB251DAF61F4002B040C /* SignUpViewController.m */; };
 		2428DB291DAF624B002B040C /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2428DB281DAF624B002B040C /* WelcomeViewController.m */; };
+		2428DB2D1DB0B476002B040C /* ZCWHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2428DB2C1DB0B476002B040C /* ZCWHttpTool.m */; };
+		2428DB361DB0BEEC002B040C /* FriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2428DB351DB0BEEC002B040C /* FriendModel.m */; };
+		2428DB391DB0BF33002B040C /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2428DB381DB0BF33002B040C /* FriendCell.m */; };
 		2439CBFE1DADD7BD0099F174 /* YeeCallNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2439CBFD1DADD7BD0099F174 /* YeeCallNavigationController.m */; };
 		2439CC011DADD7EE0099F174 /* YeeCallTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC001DADD7EE0099F174 /* YeeCallTabBarController.m */; };
 		2439CC071DADD8BD0099F174 /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC061DADD8BD0099F174 /* FriendViewController.m */; };
@@ -35,6 +38,12 @@
 		2428DB251DAF61F4002B040C /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		2428DB271DAF624B002B040C /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		2428DB281DAF624B002B040C /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		2428DB2B1DB0B476002B040C /* ZCWHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCWHttpTool.h; sourceTree = "<group>"; };
+		2428DB2C1DB0B476002B040C /* ZCWHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCWHttpTool.m; sourceTree = "<group>"; };
+		2428DB341DB0BEEC002B040C /* FriendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendModel.h; sourceTree = "<group>"; };
+		2428DB351DB0BEEC002B040C /* FriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendModel.m; sourceTree = "<group>"; };
+		2428DB371DB0BF33002B040C /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
+		2428DB381DB0BF33002B040C /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
 		2439CBFC1DADD7BD0099F174 /* YeeCallNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YeeCallNavigationController.h; sourceTree = "<group>"; };
 		2439CBFD1DADD7BD0099F174 /* YeeCallNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YeeCallNavigationController.m; sourceTree = "<group>"; };
 		2439CBFF1DADD7EE0099F174 /* YeeCallTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YeeCallTabBarController.h; sourceTree = "<group>"; };
@@ -110,9 +119,46 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		2428DB2A1DB0B438002B040C /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				2428DB2B1DB0B476002B040C /* ZCWHttpTool.h */,
+				2428DB2C1DB0B476002B040C /* ZCWHttpTool.m */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
+		2428DB311DB0BE9A002B040C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2439CC051DADD8BD0099F174 /* FriendViewController.h */,
+				2439CC061DADD8BD0099F174 /* FriendViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2428DB321DB0BEA2002B040C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2428DB341DB0BEEC002B040C /* FriendModel.h */,
+				2428DB351DB0BEEC002B040C /* FriendModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2428DB331DB0BEAC002B040C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2428DB371DB0BF33002B040C /* FriendCell.h */,
+				2428DB381DB0BF33002B040C /* FriendCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		2439CBF51DADD3D60099F174 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2428DB2A1DB0B438002B040C /* Tool */,
 				2439CBF71DADD51E0099F174 /* Main */,
 				2439CBF81DADD52C0099F174 /* YeeCall(一块) */,
 				2439CBFB1DADD5AA0099F174 /* Friend(好友) */,
@@ -175,8 +221,9 @@
 		2439CBFB1DADD5AA0099F174 /* Friend(好友) */ = {
 			isa = PBXGroup;
 			children = (
-				2439CC051DADD8BD0099F174 /* FriendViewController.h */,
-				2439CC061DADD8BD0099F174 /* FriendViewController.m */,
+				2428DB331DB0BEAC002B040C /* View */,
+				2428DB321DB0BEA2002B040C /* Model */,
+				2428DB311DB0BE9A002B040C /* Controller */,
 			);
 			name = "Friend(好友)";
 			sourceTree = "<group>";
@@ -366,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2428DB2D1DB0B476002B040C /* ZCWHttpTool.m in Sources */,
 				2439CC0D1DADD8EA0099F174 /* GroupViewController.m in Sources */,
 				24DC365C1D8A8249001EBED8 /* AppDelegate.m in Sources */,
 				2439CBFE1DADD7BD0099F174 /* YeeCallNavigationController.m in Sources */,
@@ -377,7 +425,9 @@
 				2439CC0A1DADD8DA0099F174 /* YeeCallViewController.m in Sources */,
 				2439CC101DADD8F60099F174 /* MeViewController.m in Sources */,
 				2428DB261DAF61F4002B040C /* SignUpViewController.m in Sources */,
+				2428DB391DB0BF33002B040C /* FriendCell.m in Sources */,
 				2439CC011DADD7EE0099F174 /* YeeCallTabBarController.m in Sources */,
+				2428DB361DB0BEEC002B040C /* FriendModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

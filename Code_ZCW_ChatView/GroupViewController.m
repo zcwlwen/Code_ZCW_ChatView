@@ -57,8 +57,8 @@
     [_mainCollectionView registerClass:[GroupCollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
     
     //注册headerView  此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致  均为reusableView
-    [_mainCollectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
-    
+//    [_mainCollectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
+//
     //4.设置代理
     _mainCollectionView.delegate = self;
     _mainCollectionView.dataSource = self;
@@ -112,16 +112,16 @@
     return CGSizeMake((kWindowW-60)/3, (kWindowH-kNavH-40)/4);
 }
 
-//footer的size
+////footer的size
 //- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
 //{
 //    return CGSizeMake(10, 10);
 //}
-
-//header的size
+//
+////header的size
 //- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 //{
-//    return CGSizeMake(10, 10);
+//    return CGSizeMake(10, 100);
 //}
 
 //设置每个item的UIEdgeInsets
@@ -145,16 +145,16 @@
 
 
 //通过设置SupplementaryViewOfKind 来设置头部或者底部的view，其中 ReuseIdentifier 的值必须和 注册是填写的一致，本例都为 “reusableView”
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
-{
-    UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
-    headerView.backgroundColor =[UIColor grayColor];
-    UILabel *label = [[UILabel alloc] initWithFrame:headerView.bounds];
-    label.text = @"这是collectionView的头部";
-    label.font = [UIFont systemFontOfSize:20];
-    [headerView addSubview:label];
-    return headerView;
-}
+//- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+//{
+//    UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
+//    headerView.backgroundColor =[UIColor grayColor];
+//    UILabel *label = [[UILabel alloc] initWithFrame:headerView.bounds];
+//    label.text = @"这是collectionView的头部";
+//    label.font = [UIFont systemFontOfSize:20];
+//    [headerView addSubview:label];
+//    return headerView;
+//}
 
 //点击item方法
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
