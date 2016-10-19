@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 #import <Masonry.h>
+#import "ZCWHttpTool.h"
+#import <SVProgressHUD.h>
 
 @interface LoginViewController ()
 
@@ -46,6 +48,8 @@
     [_backBtn setImage:[UIImage imageNamed:@"ic_navbar_back_n"] forState:UIControlStateNormal];
     [_backBtn setTitle:@"上一步" forState:UIControlStateNormal];
     [_backBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_backBtn addTarget:self action:@selector(backBtnClickEvent) forControlEvents:UIControlEventTouchUpInside];
+    
     
     _loginTitle = [[UILabel alloc]init];
     _loginTitle.text = @"登录";
@@ -94,7 +98,7 @@
     _loginBtn.layer.masksToBounds = YES;
     _loginBtn.layer.cornerRadius = 3;
     _loginBtn.backgroundColor = kYellow;
-    
+    [_loginBtn addTarget:self action:@selector(loginBtnClickEvent) forControlEvents:UIControlEventTouchUpInside];
     
     _countryLine = [[UIView alloc]init];
     _countryLine.backgroundColor = [UIColor darkGrayColor];
@@ -201,11 +205,53 @@
         make.left.equalTo(weakSelf.view).with.offset(20);
         make.right.equalTo(weakSelf.view).with.offset(-20);
         make.height.mas_equalTo(40);
-        
     }];
     
     
 }
-
+#pragma mark - backBtnClickEvent
+- (void)backBtnClickEvent{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+#pragma mark - loginBtnClickEvent
+- (void)loginBtnClickEvent{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *url = @"http://121.42.187.66/coolchat/login";
+    NSDictionary *para = @{@"userId":_numberTextfiled.text,
+                           @"password":_passwordTextfiled.text};
+    [ZCWHttpTool postWithUrlString:url parameters:para success:^(id data) {
+        NSDictionary *userInfo = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSString *status = [userInfo objectForKey:@"status"];
+        
+        NSString *userId = [userInfo objectForKey:@"userId"];
+        NSString *name   = [userInfo objectForKey:@"name"];
+        NSString *sex    = [userInfo objectForKey:@"sex"];
+        NSString *avatar = [userInfo objectForKey:@"avatar"];
+        NSString *token  = [userInfo objectForKey:@"token"];
+        
+        if ([[NSString stringWithFormat:@"%@",status] isEqualToString:@"1"]) {
+            //login success save userInfo
+            [userDefaults setObject:userId forKey:@"userId"];
+            [userDefaults setObject:name forKey:@"name"];
+            [userDefaults setObject:sex forKey:@"sex"];
+            [userDefaults setObject:avatar forKey:@"avator"];
+            [userDefaults setObject:token forKey:@"token"];
+            [userDefaults synchronize];
+            
+            [SVProgressHUD setMinimumDismissTimeInterval:0.5];
+            [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+            
+            
+            
+        }else{
+            //login fail user is not exist or password is error
+        }
+        ZCWLog(@"%@",userInfo);
+        
+    } failure:^(NSError *error) {
+        //
+    }];
+}
 
 @end

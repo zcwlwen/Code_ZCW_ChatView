@@ -51,6 +51,7 @@
 - (void)setUI{
     WS(weakSelf);
     _mainTableView = [[UITableView alloc]init];
+    _mainTableView.tableFooterView = [[UIView new]initWithFrame:CGRectZero];
     
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
@@ -136,8 +137,6 @@
     return _cell;
     
 }
-
-
 
 
 @end
