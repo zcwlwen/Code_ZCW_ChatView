@@ -7,11 +7,14 @@
 //
 
 #import "FriendViewController.h"
+#import "LoginViewController.h"
 #import "FriendCell.h"
 #import "FriendModel.h"
 #import <Masonry.h>
+#import <SVProgressHUD.h>
 
 #import "ZCWHttpTool.h"
+#import "CheckIsLogined.h"
 
 @interface FriendViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -47,6 +50,11 @@
     [self getFriendsList];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self checkLogin];
+}
+
 #pragma mark - 创建UI
 - (void)setUI{
     WS(weakSelf);
@@ -71,7 +79,7 @@
     NSDictionary *params = @{
                              @"userId":@"1",
                              };
-    NSString *url = @"http://121.42.187.66/coolchat/friends";
+    NSString *url = kAPIFriend;
     [ZCWHttpTool postWithUrlString:url parameters:params success:^(id data) {
         NSArray *array = [[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil] objectForKey:@"friends"];
         for (NSDictionary *infoDic in array) {
@@ -79,8 +87,12 @@
             [self.dataArray1 addObject:_model];
         }
         [self.mainTableView reloadData];
+        [SVProgressHUD setMinimumDismissTimeInterval:0.5];
+        [SVProgressHUD showSuccessWithStatus:@"获取好友列表"];
         
     } failure:^(NSError *error) {
+        [SVProgressHUD setMinimumDismissTimeInterval:0.5];
+        [SVProgressHUD showErrorWithStatus:@"网络出错"];
         ZCWLog(@"网络异常");
     }];
 }
@@ -110,6 +122,15 @@
         ZCWLog(@"全部");
     }
 }
+
+#pragma mark 检查是否登录 没有登录跳转到登录界面
+- (void)checkLogin{
+    BOOL isLogin = [CheckIsLogined checkIsLogin];
+    if (!isLogin) {
+        [self presentViewController:[[LoginViewController alloc]init] animated:YES completion:nil];
+    }
+}
+
 #pragma mark - TableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -135,7 +156,6 @@
     _cell.model = _dataArray[indexPath.row];
 //    cell.detailTextLabel.text = _model.
     return _cell;
-    
 }
 
 

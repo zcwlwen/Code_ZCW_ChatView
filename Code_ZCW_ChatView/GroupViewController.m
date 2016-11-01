@@ -7,8 +7,10 @@
 //
 
 #import "GroupViewController.h"
+#import "LoginViewController.h"
 #import "GroupCollectionViewCell.h"
 #import <Masonry.h>
+#import "CheckIsLogined.h"
 
 @interface GroupViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -26,6 +28,18 @@
     
     [self addBarButton];
     [self creatCollectionView];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self checkLogin];
+}
+#pragma mark 检查是否登录 没有登录跳转到登录界面
+- (void)checkLogin{
+    BOOL isLogin = [CheckIsLogined checkIsLogin];
+    if (!isLogin) {
+        [self presentViewController:[[LoginViewController alloc]init] animated:YES completion:nil];
+    }
 }
 #pragma mark - CollectionView的初始化
 - (void)creatCollectionView{

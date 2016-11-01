@@ -42,6 +42,11 @@
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
 
+//API
+
+#define kAPILogin @"http://120.27.47.125/coolchat/login"
+#define kAPIFriend @"http://120.27.47.125/coolchat/friends"
+
 //创建单例
 
 #define singleH(name) +(instancetype)share##name;

@@ -9,7 +9,7 @@
 #import "WelcomeViewController.h"
 #import <Masonry.h>
 #import "LoginViewController.h"
-
+#import "LoginNavagationController.h"
 @interface WelcomeViewController ()
 
 @property (nonatomic , strong)UIImageView *logoImage;

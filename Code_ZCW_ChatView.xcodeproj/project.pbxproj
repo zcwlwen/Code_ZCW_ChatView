@@ -20,6 +20,8 @@
 		2439CC0A1DADD8DA0099F174 /* YeeCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC091DADD8DA0099F174 /* YeeCallViewController.m */; };
 		2439CC0D1DADD8EA0099F174 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC0C1DADD8EA0099F174 /* GroupViewController.m */; };
 		2439CC101DADD8F60099F174 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC0F1DADD8F60099F174 /* MeViewController.m */; };
+		248EB8711DB8662B0057216C /* LoginNavagationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248EB8701DB8662B0057216C /* LoginNavagationController.m */; };
+		24C3F5C61DC8820C00C2F32D /* CheckIsLogined.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C3F5C51DC8820C00C2F32D /* CheckIsLogined.m */; };
 		24DC36591D8A8249001EBED8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DC36581D8A8249001EBED8 /* main.m */; };
 		24DC365C1D8A8249001EBED8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DC365B1D8A8249001EBED8 /* AppDelegate.m */; };
 		24DC36621D8A8249001EBED8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DC36601D8A8249001EBED8 /* Main.storyboard */; };
@@ -56,6 +58,10 @@
 		2439CC0C1DADD8EA0099F174 /* GroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
 		2439CC0E1DADD8F60099F174 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
 		2439CC0F1DADD8F60099F174 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		248EB86F1DB8662B0057216C /* LoginNavagationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginNavagationController.h; sourceTree = "<group>"; };
+		248EB8701DB8662B0057216C /* LoginNavagationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginNavagationController.m; sourceTree = "<group>"; };
+		24C3F5C41DC8820C00C2F32D /* CheckIsLogined.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckIsLogined.h; sourceTree = "<group>"; };
+		24C3F5C51DC8820C00C2F32D /* CheckIsLogined.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckIsLogined.m; sourceTree = "<group>"; };
 		24DC36541D8A8249001EBED8 /* Code_ZCW_ChatView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Code_ZCW_ChatView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DC36581D8A8249001EBED8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24DC365A1D8A8249001EBED8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -115,6 +121,8 @@
 				2428DB251DAF61F4002B040C /* SignUpViewController.m */,
 				2428DB271DAF624B002B040C /* WelcomeViewController.h */,
 				2428DB281DAF624B002B040C /* WelcomeViewController.m */,
+				248EB86F1DB8662B0057216C /* LoginNavagationController.h */,
+				248EB8701DB8662B0057216C /* LoginNavagationController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -122,6 +130,7 @@
 		2428DB2A1DB0B438002B040C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				24C3F5C01DC87F2900C2F32D /* UserDefault */,
 				2428DB2B1DB0B476002B040C /* ZCWHttpTool.h */,
 				2428DB2C1DB0B476002B040C /* ZCWHttpTool.m */,
 			);
@@ -226,6 +235,15 @@
 				2428DB311DB0BE9A002B040C /* Controller */,
 			);
 			name = "Friend(好友)";
+			sourceTree = "<group>";
+		};
+		24C3F5C01DC87F2900C2F32D /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				24C3F5C41DC8820C00C2F32D /* CheckIsLogined.h */,
+				24C3F5C51DC8820C00C2F32D /* CheckIsLogined.m */,
+			);
+			name = UserDefault;
 			sourceTree = "<group>";
 		};
 		24DC364B1D8A8249001EBED8 = {
@@ -414,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2428DB2D1DB0B476002B040C /* ZCWHttpTool.m in Sources */,
+				24C3F5C61DC8820C00C2F32D /* CheckIsLogined.m in Sources */,
 				2439CC0D1DADD8EA0099F174 /* GroupViewController.m in Sources */,
 				24DC365C1D8A8249001EBED8 /* AppDelegate.m in Sources */,
 				2439CBFE1DADD7BD0099F174 /* YeeCallNavigationController.m in Sources */,
@@ -424,6 +443,7 @@
 				2428DB1F1DAF1C3C002B040C /* GroupCollectionViewCell.m in Sources */,
 				2439CC0A1DADD8DA0099F174 /* YeeCallViewController.m in Sources */,
 				2439CC101DADD8F60099F174 /* MeViewController.m in Sources */,
+				248EB8711DB8662B0057216C /* LoginNavagationController.m in Sources */,
 				2428DB261DAF61F4002B040C /* SignUpViewController.m in Sources */,
 				2428DB391DB0BF33002B040C /* FriendCell.m in Sources */,
 				2439CC011DADD7EE0099F174 /* YeeCallTabBarController.m in Sources */,

@@ -27,7 +27,6 @@
 @property (nonatomic , strong)UIView *numberLine;
 @property (nonatomic , strong)UIView *passwordLine;
 
-
 @end
 
 @implementation LoginViewController
@@ -36,7 +35,6 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self setUI];
-    
     // Do any additional setup after loading the view.
 }
 
@@ -46,10 +44,9 @@
     
     _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_backBtn setImage:[UIImage imageNamed:@"ic_navbar_back_n"] forState:UIControlStateNormal];
-    [_backBtn setTitle:@"上一步" forState:UIControlStateNormal];
+    [_backBtn setTitle:@"取消" forState:UIControlStateNormal];
     [_backBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_backBtn addTarget:self action:@selector(backBtnClickEvent) forControlEvents:UIControlEventTouchUpInside];
-    
     
     _loginTitle = [[UILabel alloc]init];
     _loginTitle.text = @"登录";
@@ -63,20 +60,17 @@
     _country.textAlignment = NSTextAlignmentRight;
     _country.font = [UIFont systemFontOfSize:14];
     
-    
     _countryValue = [[UILabel alloc]init];
     _countryValue.text = @"中国";
     _countryValue.textColor = [UIColor blackColor];
     _countryValue.textAlignment = NSTextAlignmentLeft;
     _countryValue.font = [UIFont systemFontOfSize:14];
     
-    
     _numberLabel = [[UILabel alloc]init];
     _numberLabel.text  = @"+86";
     _numberLabel.textColor = [UIColor darkGrayColor];
     _numberLabel.textAlignment = NSTextAlignmentRight;
     _numberLabel.font = [UIFont systemFontOfSize:14];
-    
     
     _numberTextfiled = [[UITextField alloc]init];
     _numberTextfiled.font = [UIFont systemFontOfSize:14];
@@ -111,7 +105,6 @@
     _passwordLine = [[UIView alloc]init];
     _passwordLine.backgroundColor = [UIColor darkGrayColor];
     _passwordLine.alpha = 0.1;
-    
     
     [self.view addSubview:_backBtn];
     [self.view addSubview:_loginTitle];
@@ -206,8 +199,6 @@
         make.right.equalTo(weakSelf.view).with.offset(-20);
         make.height.mas_equalTo(40);
     }];
-    
-    
 }
 #pragma mark - backBtnClickEvent
 - (void)backBtnClickEvent{
@@ -217,7 +208,7 @@
 - (void)loginBtnClickEvent{
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
-    NSString *url = @"http://121.42.187.66/coolchat/login";
+    NSString *url = kAPILogin;
     NSDictionary *para = @{@"userId":_numberTextfiled.text,
                            @"password":_passwordTextfiled.text};
     [ZCWHttpTool postWithUrlString:url parameters:para success:^(id data) {
@@ -241,16 +232,18 @@
             
             [SVProgressHUD setMinimumDismissTimeInterval:0.5];
             [SVProgressHUD showSuccessWithStatus:@"登录成功"];
-            
-            
-            
+            [self dismissViewControllerAnimated:YES completion:nil];
         }else{
+            [SVProgressHUD setMinimumDismissTimeInterval:0.5];
+            [SVProgressHUD showErrorWithStatus:@"密码错误"];
             //login fail user is not exist or password is error
         }
         ZCWLog(@"%@",userInfo);
         
     } failure:^(NSError *error) {
         //
+        [SVProgressHUD setMinimumDismissTimeInterval:0.5];
+        [SVProgressHUD showErrorWithStatus:@"网络错误"];
     }];
 }
 
